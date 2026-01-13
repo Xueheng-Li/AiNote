@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Xueheng-Li/AiNote)
 
+[中文说明](./中文README.md) | English
+
 An AI-powered note-taking system designed for use with [Claude Code](https://claude.com/claude-code) and [Obsidian](https://obsidian.md/).
 
 ## 🎯 Overview
@@ -39,6 +41,16 @@ This system transforms your note-taking workflow by having Claude Code automatic
 4. Start using Claude Code within the vault directory
 
 ### 2️⃣ Basic Usage
+
+> **⚠️ First Step Required**: Before using `/takenote`, you must enable the command by copying it to your Claude commands folder:
+> ```bash
+> # macOS/Linux
+> cp .claude/commands/takenote.md ~/.claude/commands/
+>
+> # Windows
+> copy .claude\commands\takenote.md %USERPROFILE%\.claude\commands\
+> ```
+> This is required even when using the command within the vault directory.
 
 Use the `/takenote` slash command:
 
@@ -153,6 +165,21 @@ When 5+ notes relate to a topic, Claude Code suggests creating a Map of Content 
 ### 📈 Continuous Learning
 
 `system_config/lessons_learned.md` stores insights about your preferences, making the system smarter over time.
+
+## 📖 Example: AI-Native Learning Center
+
+The vault includes a sample note that demonstrates the philosophy and value of this system: **[AI原生笔记系统作为个性化学习中心](2_ideas/AI原生笔记系统作为个性化学习中心.md)**
+
+This note illustrates how an AI-native notebook system becomes a **personalized learning center**:
+
+- **Memory Extension**: Never forget — cross-time connections, pattern recognition, cumulative intelligence
+- **Smart Connections**: Discover hidden relationships through automatic semantic search and linking
+- **Context Injection**: The system learns "who you are" through your Personal Profile and interaction history
+- **Self-Improvement**: The system evolves through `lessons_learned.md`, avoiding repeated mistakes
+
+The note contrasts **AI-Native** vs **AI-Added** approaches, explaining why AI must be part of the system from the start, not bolted on afterward. It also honestly discusses limitations: system dependency, privacy boundaries, and the echo chamber effect.
+
+> This note was itself processed through the workflow — demonstrating how the system handles content about the system itself, creating a self-documenting and self-refining knowledge ecosystem.
 
 ## 🎨 Customization
 
