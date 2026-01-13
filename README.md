@@ -35,7 +35,7 @@
 
 ### 1️⃣ 安装
 
-1. 复制 `ai-takenote/` 到你想放的位置
+1. 克隆或下载 AiNote 仓库
 2. 用 Obsidian 打开这个文件夹
 3. 编辑 `3_profile/Personal Profile.md` 填写你的信息
 4. 在这个目录下启动 Claude Code
@@ -93,7 +93,7 @@ copy .claude\commands\takenote.md %USERPROFILE%\.claude\commands\
 ## 📁 文件夹结构
 
 ```
-ai-takenote/
+AiNote/
 ├── .claude/commands/    # 命令文件
 ├── CLAUDE.md           # 系统核心配置
 ├── README.md           # 说明文档

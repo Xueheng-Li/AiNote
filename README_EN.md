@@ -35,7 +35,7 @@ This system transforms your note-taking workflow by having Claude Code automatic
 
 ### 1️⃣ Setup
 
-1. Copy the `ai-takenote/` folder to your desired location
+1. Clone or download the AiNote repository
 2. Open the folder as an Obsidian vault
 3. Edit `3_profile/Personal Profile.md` with your information
 4. Start using Claude Code within the vault directory
@@ -97,10 +97,10 @@ Want to take notes to your vault from anywhere on your computer? Set up the glob
 2. **Edit the file** and replace `YOUR_VAULT_PATH` with your actual vault path:
    ```bash
    # macOS/Linux
-   /Users/your-username/path/to/ai-takenote
+   /Users/your-username/AiNote
 
    # Windows
-   C:\Users\your-username\path\to\ai-takenote
+   C:\Users\your-username\AiNote
    ```
 3. **Copy to your Claude commands folder**:
    ```bash
@@ -124,7 +124,7 @@ cd ~/some-other-project
 ## 📁 Folder Structure
 
 ```
-ai-takenote/
+AiNote/
 ├── .claude/
 │   └── commands/
 │       └── takenote.md # /takenote slash command
