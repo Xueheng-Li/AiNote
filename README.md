@@ -169,12 +169,12 @@ vault 里有一篇 [AI原生笔记系统作为个性化学习中心](2_ideas/AI�
 
 ## 👨‍💻 作者
 
-[李学恒](https://github.com/Xueheng-Li)
+[Xueheng Li](https://github.com/Xueheng-Li)
 
 ## 📜 MIT
 
 ---
 
 <p align="center">
-用 ❤️ 做的
+Made with ❤️ by <a href="https://github.com/Xueheng-Li">Xueheng Li</a>
 </p>
