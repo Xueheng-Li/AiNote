@@ -77,6 +77,38 @@ Example:
 /takenote @type:research New findings on behavioral economics...
 ```
 
+### 5️⃣ Use `/takenote` From Anywhere 🌍
+
+Want to take notes to your vault from anywhere on your computer? Set up the global command:
+
+1. **Copy the command template** from `system_config/takenote.md`
+2. **Edit the file** and replace `YOUR_VAULT_PATH` with your actual vault path:
+   ```bash
+   # macOS/Linux
+   /Users/your-username/path/to/ai-takenote
+
+   # Windows
+   C:\Users\your-username\path\to\ai-takenote
+   ```
+3. **Copy to your Claude commands folder**:
+   ```bash
+   # macOS/Linux
+   cp system_config/takenote.md ~/.claude/commands/
+
+   # Windows
+   copy system_config\takenote.md %USERPROFILE%\.claude\commands\
+   ```
+
+Now you can use `/takenote` from any directory!
+
+**Example:**
+```bash
+# You're in a completely different project
+cd ~/some-other-project
+# But you can still take notes to your vault
+/takenote Just had an idea about the new research direction...
+```
+
 ## 📁 Folder Structure
 
 ```
