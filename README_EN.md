@@ -230,7 +230,7 @@ MIT License — Feel free to modify and distribute.
 
 ## 🤝 Contributing
 
-Contributions welcome! Please submit issues and pull requests on [GitHub](https://github.com/Xueheng-Li/ai-takenote).
+Contributions welcome! Please submit issues and pull requests on [GitHub](https://github.com/Xueheng-Li/AiNote).
 
 ---
 
