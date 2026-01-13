@@ -111,6 +111,16 @@ Capture reusable insights in `system_config/lessons_learned.md`. Read it before 
 
 ## Customization
 
+### 当创建或修改中文笔记时，务必去除翻译腔和 AI 味
+
+- 不要有 AI 味
+- 写自然流畅的中文，像人说话一样
+- 避免："值得注意的是"、"需要强调的是"、"总而言之"、"综上所述"
+- 避免：过度使用"的"字、生硬的被动语态、冗长的定语从句
+- 避免：空洞的套话和过度礼貌的表达
+- 创建新笔记后立即检查是否有翻译腔或AI味表达，发现即改
+- 如非必要，勿用引号
+
 ### Personalization Steps
 
 1. Edit `3_profile/Personal Profile.md` with your information
