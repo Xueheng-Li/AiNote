@@ -1,48 +1,48 @@
-# 🤖 AI-Native Note-Taking System
+# 🤖 AI 原生笔记系统
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Xueheng-Li/AiNote)
 
-[中文说明](./中文README.md) | English
+中文 | [English](./README_EN.md)
 
-An AI-powered note-taking system designed for use with [Claude Code](https://claude.com/claude-code) and [Obsidian](https://obsidian.md/).
+一个专为 [Claude Code](https://claude.com/claude-code) 和 [Obsidian](https://obsidian.md/) 设计的 AI 驱动笔记系统。
 
-## 🎯 Overview
+## 🎯 概述
 
-This system transforms your note-taking workflow by having Claude Code automatically:
+这个系统通过 Claude Code 自动化处理，彻底改变您的笔记工作流：
 
-- 🔍 **Analyze** incoming notes for topics, keywords, and type
-- 📁 **File** notes into appropriate folders
-- 🔗 **Connect** notes with wiki links to related content
-- 📋 **Maintain** folder indexes and Maps of Content
-- 🧠 **Learn** your preferences over time
-
----
-
-## ⚡ The Soul: CLAUDE.md
-
-> 💡 **`CLAUDE.md` is the brain and soul of this entire system.** It contains all the instructions that guide Claude Code's behavior when processing your notes.
-
-- Every note you create flows through the workflow defined in `CLAUDE.md`
-- It defines folder structure, note formats, linking rules, and safety protocols
-- Customize it to make the system truly yours
-- The better your `CLAUDE.md`, the smarter your note-taking becomes
-
-**Think of `CLAUDE.md` as the "operating system" for your AI-native notes.**
+- 🔍 **分析** 笔记的主题、关键词和类型
+- 📁 **归档** 笔记到合适的文件夹
+- 🔗 **连接** 笔记与相关内容的 wiki 链接
+- 📋 **维护** 文件夹索引和内容地图（MoC）
+- 🧠 **学习** 您的偏好设置，越用越智能
 
 ---
 
-## 🚀 Quick Start
+## ⚡ 灵魂：CLAUDE.md
 
-### 1️⃣ Setup
+> 💡 **`CLAUDE.md` 是整个系统的大脑和灵魂。** 它包含了指导 Claude Code 处理笔记的所有指令。
 
-1. Copy the `ai-takenote/` folder to your desired location
-2. Open the folder as an Obsidian vault
-3. Edit `3_profile/Personal Profile.md` with your information
-4. Start using Claude Code within the vault directory
+- 您创建的每一条笔记都遵循 `CLAUDE.md` 中定义的工作流
+- 它定义了文件夹结构、笔记格式、链接规则和安全协议
+- 自定义它，让系统真正属于您
+- `CLAUDE.md` 越完善，您的笔记体验就越智能
 
-### 2️⃣ Basic Usage
+**把 `CLAUDE.md` 看作 AI 笔记系统的"操作系统"。**
 
-> **⚠️ First Step Required**: Before using `/takenote`, you must enable the command by copying it to your Claude commands folder:
+---
+
+## 🚀 快速开始
+
+### 1️⃣ 安装设置
+
+1. 将 `ai-takenote/` 文件夹复制到您想要的位置
+2. 用 Obsidian 打开该文件夹作为 vault
+3. 编辑 `3_profile/Personal Profile.md` 填写您的信息
+4. 在 vault 目录内启动 Claude Code
+
+### 2️⃣ 基本用法
+
+> **⚠️ 必要的第一步**：在使用 `/takenote` 之前，您必须通过将命令复制到 Claude 命令文件夹来启用它：
 > ```bash
 > # macOS/Linux
 > cp .claude/commands/takenote.md ~/.claude/commands/
@@ -50,51 +50,51 @@ This system transforms your note-taking workflow by having Claude Code automatic
 > # Windows
 > copy .claude\commands\takenote.md %USERPROFILE%\.claude\commands\
 > ```
-> This is required even when using the command within the vault directory.
+> 即使在 vault 目录内使用命令，这也是必需的步骤。
 
-Use the `/takenote` slash command:
-
-```
-/takenote Here's a research idea about network effects in social media platforms...
-```
-
-Or simply give Claude Code your raw note content directly.
-
-Claude Code will:
-1. 🔍 Analyze the content
-2. 📝 Create a properly formatted note
-3. 📂 Place it in the appropriate folder (e.g., `6_research/`)
-4. 🏷️ Add relevant tags and links
-5. ✏️ Update the folder's `_index.md`
-
-### 3️⃣ Slash Command
-
-The `/takenote` command triggers the full note-processing workflow:
+使用 `/takenote` 斜杠命令：
 
 ```
-/takenote <your note content>
+/takenote 关于社交媒体平台网络效应的研究想法...
 ```
 
-### 4️⃣ Modifiers
+或者直接给 Claude Code 您的原始笔记内容。
 
-Add modifiers to control note placement:
+Claude Code 会：
+1. 🔍 分析内容
+2. 📝 创建格式规范的笔记
+3. 📂 放入合适的文件夹（如 `6_research/`）
+4. 🏷️ 添加相关标签和链接
+5. ✏️ 更新文件夹的 `_index.md`
 
-- **`@inbox`** 📥 — Force placement in inbox for manual review
-- **`@merge note name`** 🔄 — Integrate into existing note
-- **`@type:[category]`** 📂 — Override automatic categorization
-- **`@link note`** 🔗 — Request specific linking
+### 3️⃣ 斜杠命令
 
-Example:
+`/takenote` 命令触发完整的笔记处理工作流：
+
 ```
-/takenote @type:research New findings on behavioral economics...
+/takenote <您的笔记内容>
 ```
 
-### 5️⃣ Use `/takenote` From Anywhere 🌍
+### 4️⃣ 修饰符
 
-Want to take notes to your vault from anywhere on your computer? Set up the global command:
+添加修饰符来控制笔记归档位置：
 
-1. **Copy the command template** from `system_config/takenote.md`
-2. **Edit the file** and replace `YOUR_VAULT_PATH` with your actual vault path:
+- **`@inbox`** 📥 — 强制放入收件箱供人工审核
+- **`@merge note name`** 🔄 — 整合到已有笔记
+- **`@type:[category]`** 📂 — 覆盖自动分类
+- **`@link note`** 🔗 — 请求指定链接
+
+示例：
+```
+/takenote @type:research 行为经济学的新发现...
+```
+
+### 5️⃣ 在任何地方使用 `/takenote` 🌍
+
+想在电脑的任何位置向您的 vault 添加笔记？设置全局命令：
+
+1. **复制命令模板** 从 `system_config/takenote.md`
+2. **编辑文件**，将 `YOUR_VAULT_PATH` 替换为您的实际 vault 路径：
    ```bash
    # macOS/Linux
    /Users/your-username/path/to/ai-takenote
@@ -102,7 +102,7 @@ Want to take notes to your vault from anywhere on your computer? Set up the glob
    # Windows
    C:\Users\your-username\path\to\ai-takenote
    ```
-3. **Copy to your Claude commands folder**:
+3. **复制到 Claude 命令文件夹**：
    ```bash
    # macOS/Linux
    cp system_config/takenote.md ~/.claude/commands/
@@ -111,129 +111,130 @@ Want to take notes to your vault from anywhere on your computer? Set up the glob
    copy system_config\takenote.md %USERPROFILE%\.claude\commands\
    ```
 
-Now you can use `/takenote` from any directory!
+现在您可以在任何目录使用 `/takenote`！
 
-**Example:**
+**示例：**
 ```bash
-# You're in a completely different project
+# 您在完全不同的项目中
 cd ~/some-other-project
-# But you can still take notes to your vault
-/takenote Just had an idea about the new research direction...
+# 但仍可以向您的 vault 添加笔记
+/takenote 刚才想到一个新的研究方向...
 ```
 
-## 📁 Folder Structure
+## 📁 文件夹结构
 
 ```
 ai-takenote/
 ├── .claude/
 │   └── commands/
-│       └── takenote.md # /takenote slash command
-├── CLAUDE.md           # 🧠 AI instructions (THE SOUL - core config)
-├── README.md           # 📖 This file
-├── 0_inbox/            # 📥 Unprocessed notes
-├── 1_navigation/       # 🗺️ External resource indexes
-├── 2_ideas/            # 💡 Ideas and thoughts
-├── 3_profile/          # 👤 Personal profile & status
-├── 4_teaching/         # 🎓 Teaching materials
-├── 5_meetings/         # 🤝 Meeting notes
-├── 6_research/         # 🔬 Research notes
-├── 7_admin/            # 📊 Administrative docs
-├── 8_code/             # 💻 Code snippets
-├── 9_attachments/      # 📎 Images, PDFs, files
-├── 10_bookmarks/       # 🔖 Web bookmarks
-├── workspace/          # 🛠️ Temp & AI outputs
-└── system_config/      # ⚙️ System configuration
+│       └── takenote.md # /takenote 斜杠命令
+├── CLAUDE.md           # 🧠 AI 指令（核心灵魂 - 核心配置）
+├── README.md           # 📖 英文说明
+├── 中文README.md       # 📖 本文件
+├── 0_inbox/            # 📥 待处理笔记
+├── 1_navigation/       # 🗺️ 外部资源索引
+├── 2_ideas/            # 💡 想法和思考
+├── 3_profile/          # 👤 个人档案和状态
+├── 4_teaching/         # 🎓 教学材料
+├── 5_meetings/         # 🤝 会议记录
+├── 6_research/         # 🔬 研究笔记
+├── 7_admin/            # 📊 行政文档
+├── 8_code/             # 💻 代码片段
+├── 9_attachments/      # 📎 图片、PDF、文件
+├── 10_bookmarks/       # 🔖 网页书签
+├── workspace/          # 🛠️ 临时文件和 AI 输出
+└── system_config/      # ⚙️ 系统配置和命令模板
 ```
 
-## ✨ Key Features
+## ✨ 核心功能
 
-### 🔷 Obsidian Integration
+### 🔷 Obsidian 集成
 
-- **Wiki Links** 🔗 — `note name` for internal linking
-- **Aliases** 🏷️ — `display text` for custom display
-- **Tags** 📌 — `#type/idea`, `#status/draft`, `#project/main`
-- **Frontmatter** 📋 — YAML metadata for each note
+- **Wiki 链接** 🔗 — `note name` 用于内部链接
+- **别名** 🏷️ — `display text` 自定义显示文本
+- **标签** 📌 — `#type/idea`、`#status/draft`、`#project/main`
+- **Frontmatter** 📋 — 每条笔记的 YAML 元数据
 
-### 📑 Folder Indexes
+### 📑 文件夹索引
 
-Each folder contains an `_index.md` with one-sentence descriptions of all notes. Claude Code maintains these automatically.
+每个文件夹包含一个 `_index.md`，内有所有笔记的单行描述。Claude Code 自动维护这些文件。
 
-### 🗺️ Maps of Content
+### 🗺️ 内容地图（MoC）
 
-When 5+ notes relate to a topic, Claude Code suggests creating a Map of Content (MoC) as a navigation hub.
+当 5 条以上笔记与某个主题相关时，Claude Code 会建议创建内容地图（MoC）作为导航中心。
 
-### 📈 Continuous Learning
+### 📈 持续学习
 
-`system_config/lessons_learned.md` stores insights about your preferences, making the system smarter over time.
+`system_config/lessons_learned.md` 存储关于您偏好的洞察，让系统越用越智能。
 
-## 📖 Example: AI-Native Learning Center
+## 📖 示例：AI 原生学习中心
 
-The vault includes a sample note that demonstrates the philosophy and value of this system: **[AI原生笔记系统作为个性化学习中心](2_ideas/AI原生笔记系统作为个性化学习中心.md)**
+本 vault 包含一个展示系统理念与价值的示例笔记：**[AI原生笔记系统作为个性化学习中心](2_ideas/AI原生笔记系统作为个性化学习中心.md)**
 
-This note illustrates how an AI-native notebook system becomes a **personalized learning center**:
+该笔记展示了 AI 原生笔记系统如何成为**个性化学习中心**：
 
-- **Memory Extension**: Never forget — cross-time connections, pattern recognition, cumulative intelligence
-- **Smart Connections**: Discover hidden relationships through automatic semantic search and linking
-- **Context Injection**: The system learns "who you are" through your Personal Profile and interaction history
-- **Self-Improvement**: The system evolves through `lessons_learned.md`, avoiding repeated mistakes
+- **记忆延伸**：永不遗忘——跨时间连接、模式识别、累积智能
+- **智能连接**：通过自动语义搜索和链接发现隐藏关系
+- **上下文注入**：系统通过个人档案和交互历史学习"您是谁"
+- **自我改进**：系统通过 `lessons_learned.md` 进化，避免重复错误
 
-The note contrasts **AI-Native** vs **AI-Added** approaches, explaining why AI must be part of the system from the start, not bolted on afterward. It also honestly discusses limitations: system dependency, privacy boundaries, and the echo chamber effect.
+该笔记对比了 **AI-Native** 与 **AI-Added** 方法，解释了为什么 AI 必须从一开始就作为系统的一部分，而不是事后附加。它也诚实讨论了局限性：系统依赖、隐私边界和回声室效应。
 
-> This note was itself processed through the workflow — demonstrating how the system handles content about the system itself, creating a self-documenting and self-refining knowledge ecosystem.
+> 这条笔记本身也是通过工作流处理的——展示了系统如何处理关于系统本身的内容，创建一个自我文档化和自我完善的知识生态系统。
 
-## 🎨 Customization
+## 🎨 自定义
 
-### 📂 Rename Folders
+### 📂 重命名文件夹
 
-Update both the folder names and the structure in `CLAUDE.md`.
+同时更新文件夹名称和 `CLAUDE.md` 中的结构说明。
 
-### ➕ Add Custom Commands
+### ➕ 添加自定义命令
 
-Add new quick commands to the "Quick Commands" section in `CLAUDE.md`.
+在 `CLAUDE.md` 的"快速命令"部分添加新的快捷命令。
 
-### 🤖 Configure Subagents
+### 🤖 配置子代理
 
-For specialized tasks (academic writing, meeting summarization), configure custom subagents in your Claude Code settings.
+对于专业任务（学术写作、会议总结），在 Claude Code 设置中配置自定义子代理。
 
-### 🌐 Localization
+### 🌐 本地化
 
-Folder names and templates can be translated to any language. Update `CLAUDE.md` accordingly.
+文件夹名称和模板可以翻译成任何语言。相应更新 `CLAUDE.md`。
 
-## 📦 Requirements
+## 📦 系统要求
 
-- [Obsidian](https://obsidian.md/) (recommended for viewing/editing)
-- [Claude Code](https://claude.com/claude-code) CLI tool
-- Claude API access
+- [Obsidian](https://obsidian.md/)（推荐用于查看/编辑）
+- [Claude Code](https://claude.com/claude-code) CLI 工具
+- Claude API 访问权限
 
-## 🛡️ Safety Features
+## 🛡️ 安全特性
 
-- ✅ Confirms before modifying existing notes
-- 🚫 Never deletes content without permission
-- 💾 Preserves original input
-- 👀 Shows proposed changes before applying
+- ✅ 修改已有笔记前会确认
+- 🚫 未经许可绝不删除内容
+- 💾 保留原始输入
+- 👀 应用前展示建议的修改
 
-## 💡 Tips
+## 💡 使用技巧
 
-1. **Start Simple** 🌱 — Use raw text input and let Claude Code handle organization
-2. **Review Inbox** 📥 — Periodically check `0_inbox/` for items needing attention
-3. **Build Links** 🔗 — The more you link, the more valuable your knowledge graph becomes
-4. **Update Profile** 👤 — Keep `3_profile/` current for better AI context
-5. **Clean Workspace** 🧹 — Regularly move valuable items from `workspace/` to proper folders
+1. **从简单开始** 🌱 — 使用原始文本输入，让 Claude Code 处理整理
+2. **检查收件箱** 📥 — 定期查看 `0_inbox/` 中需要处理的项目
+3. **建立链接** 🔗 — 链接越多，知识图谱越有价值
+4. **更新档案** 👤 — 保持 `3_profile/` 最新，以获得更好的 AI 上下文
+5. **清理工作区** 🧹 — 定期将 `workspace/` 中的重要内容移至合适的文件夹
 
-## 👨‍💻 Author
+## 👨‍💻 作者
 
-[Xueheng Li](https://github.com/Xueheng-Li)
+[李学恒](https://github.com/Xueheng-Li)
 
-## 📜 License
+## 📜 许可证
 
-MIT License — Feel free to modify and distribute.
+MIT 许可证 — 自由修改和分发。
 
-## 🤝 Contributing
+## 🤝 贡献
 
-Contributions welcome! Please submit issues and pull requests on [GitHub](https://github.com/Xueheng-Li/ai-takenote).
+欢迎贡献！请在 [GitHub](https://github.com/Xueheng-Li/AiNote) 提交问题和拉取请求。
 
 ---
 
 <p align="center">
-Made with ❤️ by <a href="https://github.com/Xueheng-Li">Xueheng Li</a>
+使用 ❤️ 由 <a href="https://github.com/Xueheng-Li">李学恒</a> 制作
 </p>
