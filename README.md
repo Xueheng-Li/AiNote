@@ -54,7 +54,9 @@ copy .claude\commands\takenote.md %USERPROFILE%\.claude\commands\
 
 ### 3️⃣ 开始记笔记
 
+在终端中：
 ```bash
+claude          # 启动 Claude Code
 /takenote 关于社交媒体网络效应的研究想法...
 ```
 

@@ -52,9 +52,10 @@ This system transforms your note-taking workflow by having Claude Code automatic
 > ```
 > This is required even when using the command within the vault directory.
 
-Use the `/takenote` slash command:
+Use the `/takenote` slash command from the terminal:
 
-```
+```bash
+claude          # Launch Claude Code
 /takenote Here's a research idea about network effects in social media platforms...
 ```
 
