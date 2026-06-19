@@ -1,0 +1,8 @@
+# Claude Code / tooling local state
+.claude/settings.local.json
+.omc/
+
+# OS / editor noise
+.DS_Store
+.obsidian/
+.trash/
